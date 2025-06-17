@@ -1,12 +1,12 @@
-import StrategyCanvas from "./components/StrategyCanvas";
+import { LanguageProvider } from './context/LanguageContext';
+import StrategyCanvas from './components/StrategyCanvas';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
+    <LanguageProvider>
       <StrategyCanvas />
-      
-    </div>
+    </LanguageProvider>
   );
-}
+};
 
 export default App;
